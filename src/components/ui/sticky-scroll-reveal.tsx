@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import { AnimatePresence, useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Stethoscope } from "lucide-react";
@@ -64,7 +64,7 @@ export const StickyScroll = ({
 			<div className="ml-0 w-full div relative flex items-start pr-6">
 				<div className="w-full space-y-20">
 					{content.map((item, index) => (
-						<div key={index} className="first:mt-10 h-[45rem] flex flex-col justify-center rounded-xl p-4">
+						<div key={index} className="first:mt-10 snap-center h-[45rem] flex flex-col justify-center rounded-xl p-4">
 							<motion.div initial={{
 								opacity: 0,
 							}}
@@ -85,14 +85,16 @@ export const StickyScroll = ({
 					<div className="h-40" />
 				</div>
 			</div>
-			<div
+			<motion.div
 				className={cn(
 					"hidden lg:block h-[54rem] rounded-xl max-w-xl ml-auto mr-2 sticky top-8 my-10 overflow-hidden",
 					contentClassName
 				)}
 			>
-				{content[activeCard].content ?? null}
-			</div>
-		</motion.div>
+				<AnimatePresence>
+					{content[activeCard].content ?? null}
+				</AnimatePresence>
+			</motion.div>
+		</motion.div >
 	);
 };
