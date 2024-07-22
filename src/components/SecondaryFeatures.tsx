@@ -7,21 +7,21 @@ const features = [
 	{
 		name: 'Push to deploy',
 		description:
-			'Pellentesque enim.',
+			'Gestão da agenda',
 		href: '#',
 		icon: CloudArrowUpIcon,
 	},
 	{
 		name: 'SSL certificates',
 		description:
-			'Pellentesque enim.',
+			'Gestão do financeiro.',
 		href: '#',
 		icon: LockClosedIcon,
 	},
 	{
 		name: 'Simple queues',
 		description:
-			'Pellentesque enim.',
+			'Assinatura digital.',
 		href: '#',
 		icon: ArrowPathIcon,
 	},
@@ -33,7 +33,7 @@ export default function Example() {
 			<div className="mx-auto max-w-7xl px-6 lg:px-8">
 				<div className="mx-auto max-w-2xl lg:text-center">
 					<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-						Everything you need to deploy your app
+						yDoc na Palma da Sua Mão
 					</p>
 				</div>
 				<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -50,10 +50,9 @@ export default function Example() {
 				</div>
 				<div className='mx-auto max-w-lg flex flex-col items-center justify-center gap-y-10 mt-16'>
 					<p className="text-lg leading-8 text-gray-600 text-center">
-						Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-						pulvinar et feugiat blandit at. In mi viverra elit nunc.
+						Simplifique a gestão da sua clínica médica com o Ydoc App Móvel, uma solução completa e intuitiva para administrar todos os aspectos dos seus atendimentos, diretamente do seu smartphone ou tablet.
 					</p>
-					<HoverBorderGradient>Get started</HoverBorderGradient>
+					<HoverBorderGradient>Começar gratuitamente</HoverBorderGradient>
 				</div>
 			</div>
 		</div>
