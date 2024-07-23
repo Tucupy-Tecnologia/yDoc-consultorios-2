@@ -57,14 +57,14 @@ export const StickyScroll = ({
 
 	return (
 		<motion.div
-			className="max-w-7xl mx-auto grid grid-cols-2 relative rounded-md"
+			className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 relative rounded-md"
 			ref={ref}
 		>
-			<div className="bg-white/10 h-full w-2/4 absolute -right-5" />
-			<div className="ml-0 w-full div relative flex items-start pr-6">
+			<div className="hidden lg:block bg-white/10 h-full w-2/4 absolute -right-5" />
+			<div className="ml-0 w-full div relative flex items-start md:pr-6">
 				<div className="w-full space-y-20">
 					{content.map((item, index) => (
-						<div key={index} className="first:mt-10 snap-center h-[45rem] flex flex-col justify-center rounded-xl p-4">
+						<div key={index} className="first:mt-10 snap-center h-screen lg:h-[45rem] flex flex-col justify-center rounded-xl p-4">
 							<motion.div initial={{
 								opacity: 0,
 							}}
@@ -77,7 +77,7 @@ export const StickyScroll = ({
 								</div>
 								<span className="font-bold text-brand-yellow">{index + 1}</span>
 							</motion.div>
-							<div className="h-px bg-white/10 w-full mb-5" />
+							<div className="hidden lg:block h-px bg-white/10 w-full mb-5" />
 							{item.title(activeCard === index)}
 							{item.description(activeCard === index)}
 						</div>
@@ -87,7 +87,7 @@ export const StickyScroll = ({
 			</div>
 			<motion.div
 				className={cn(
-					"hidden lg:block h-[54rem] rounded-xl max-w-xl ml-auto mr-2 sticky top-8 my-10 overflow-hidden",
+					"hidden lg:block lg:h-[54rem] rounded-xl max-w-xl ml-auto mr-2 sticky top-8 my-10 overflow-hidden",
 					contentClassName
 				)}
 			>

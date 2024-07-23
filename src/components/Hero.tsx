@@ -41,7 +41,35 @@ export function Hero() {
 					<rect fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)" width="100%" height="100%" strokeWidth={0} />
 				</svg>
 				<div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-					<motion.div style={{ opacity }} className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+					<div className="lg:hidden mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
+						<div className="mt-24 sm:mt-32 lg:mt-16">
+							<a href="#" className="inline-flex space-x-6">
+								<span className="rounded-full bg-white/10 px-3 py-1 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-white/10">
+									Novidades
+								</span>
+								<span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-100">
+									<span>Abrimos nossa waitlist</span>
+									<ChevronRightIcon aria-hidden="true" className="h-5 w-5 text-gray-400" />
+								</span>
+							</a>
+						</div>
+						<h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">
+							Tornando a gestão de consultórios <FlipWords words={words} />
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-200">
+							Aproveite nossa plataforma inovadora para otimizar cada aspecto da gestão do seu consultório, desde agendamentos até atendimento ao paciente.
+						</p>
+						<div className="mt-10 flex items-center gap-x-6">
+							<Button color='white'>
+								Começar gratuitamente
+							</Button>
+							<Button variant='outline'>
+								Saiba mais
+							</Button>
+						</div>
+					</div>
+
+					<motion.div style={{ opacity }} className="hidden lg:block mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8">
 						<div className="mt-24 sm:mt-32 lg:mt-16">
 							<a href="#" className="inline-flex space-x-6">
 								<span className="rounded-full bg-white/10 px-3 py-1 text-sm font-semibold leading-6 text-white ring-1 ring-inset ring-white/10">
@@ -68,7 +96,20 @@ export function Hero() {
 							</Button>
 						</div>
 					</motion.div>
-					<motion.div style={{ y, x }} className={cn("mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:max-w-none lg:flex-none")}>
+					<div className={cn("lg:hidden mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:mt-0 lg:max-w-none lg:flex-none")}>
+						<div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+							<div className="rounded-xl bg-white/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl lg:p-4">
+								<img
+									alt="App screenshot"
+									src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
+									width={2432}
+									height={1442}
+									className="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
+								/>
+							</div>
+						</div>
+					</div>
+					<motion.div style={{ y, x }} className={cn("hidden lg:flex mx-auto mt-16 max-w-2xl sm:mt-24 lg:mt-0 lg:max-w-none lg:flex-none")}>
 						<div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
 							<div className="rounded-xl bg-white/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl lg:p-4">
 								<img

@@ -44,7 +44,7 @@ export function WaitlistForm() {
 	return (
 		<Form {...form}>
 			<form onSubmit={form.handleSubmit(onSubmit)} className="w-full max-w-md lg:col-span-5 lg:pt-2">
-				<div className="grid grid-cols-3 gap-x-4 relative items-center">
+				<div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4 relative items-center">
 					<label htmlFor="email-address" className="sr-only">
 						Email address
 					</label>
@@ -68,7 +68,7 @@ export function WaitlistForm() {
 					/>
 					<button
 						type="submit"
-						className="flex-none col-span-1 w-32 flex items-center justify-center rounded-md h-10 bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-brand-blue shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+						className="flex-none col-span-2 md:col-span-1 md:w-32 flex items-center justify-center rounded-md h-10 bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-brand-blue shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 					>
 						{
 							isLoading
